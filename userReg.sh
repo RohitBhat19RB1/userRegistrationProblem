@@ -27,6 +27,28 @@ else
         echo "please pay attention on @ and . "
         exit
 fi
+read -p "Enter the mobile number = " number
+pattern2="^([1-9]{2}[ ][0-9]{10})$"
+if [[ $number =~ $pattern2 ]]
+then
+        echo $number;
+else
+        echo "mind the space between country code and contact-number"
+        exit
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
