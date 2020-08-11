@@ -19,7 +19,7 @@ else
 	exit
 fi
 read -p "Enter your email id " email
-pattern1="^([a-z0-9\_\.\-]+)@([a-z]+)\.([a-z\.]+)$"
+pattern1="^([a-z0-9\_\.\-]+)@([a-z]+)\.([a-z]{2,5})(\.[a-z]{2,5})?$"
 if [[ $email =~ $pattern1 ]]
 then
         echo $email;
@@ -34,6 +34,15 @@ then
         echo $number;
 else
         echo "mind the space between country code and contact-number"
+        exit
+fi
+read -p "Enter the password = " pass
+pattern3="^([a-zA-Z]{8,})$"
+if [[ $pass =~ $pattern3 ]]
+then
+        echo $pass;
+else
+        echo "minimum 8 characters required"
         exit
 fi
 
