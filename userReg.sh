@@ -37,16 +37,20 @@ else
         exit
 fi
 read -p "Enter the password = " pass
-pattern3="^([a-zA-Z]+)?[A-Z]([a-zA-Z]+)?.{8,}$"
+pattern3="^([a-zA-Z0-9]+)?[A-Z]([a-zA-Z]+)?.{8,}$"
 if [[ $pass =~ $pattern3 ]]
 then
-        echo $pass;
+        echo "password is having atleast one capital letter";
 else
         echo "minimum 8 characters and required atleast one should be in capital"
         exit
 fi
-
-
+pattern4="^([a-zA-Z0-9]+)?[0-9]([a-zA-Z]+)?.{8,}$"
+if [[ $pass =~ $pattern4 ]]
+then
+	echo "password is having atleast one numeric digit"
+else
+        echo "minimum 8 characters and required atleast one numeric digit "
 
 
 
