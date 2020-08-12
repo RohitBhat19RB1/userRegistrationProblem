@@ -37,12 +37,12 @@ else
         exit
 fi
 read -p "Enter the password = " pass
-pattern3="^([a-zA-Z]{8,})$"
+pattern3="^([a-zA-Z]+)?[A-Z]([a-zA-Z]+)?.{8,}$"
 if [[ $pass =~ $pattern3 ]]
 then
         echo $pass;
 else
-        echo "minimum 8 characters required"
+        echo "minimum 8 characters and required atleast one should be in capital"
         exit
 fi
 
