@@ -51,8 +51,12 @@ then
 	echo "password is having atleast one numeric digit"
 else
         echo "minimum 8 characters and required atleast one numeric digit "
-
-
+pattern5="^(?=[^.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\]*[.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\][^.,:;'!@#$%^&*_+=|(){}[?\-\]\/\\]*$).{8}$"
+if [[ $pass =~ $pattern5 ]]
+then
+	echo "password is having one special character"
+else
+	echo "password should have exactly one special character"
 
 
 
